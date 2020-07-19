@@ -33,16 +33,18 @@ fig.update_layout(
 )
 
 app.layout = html.Div(
+    style={"backgroundColor": colors["background"]},
     children=[
-        html.H1(children="Hello Dash"),
-        html.H2(children="Tutorial"),
+        html.H1(
+            children="Hello Dash",
+            style={"textAlign": "center", "color": colors["text"]},
+        ),
         html.Div(
-            children="""
-        Dash: A web application framework for Python
-    """
+            children="Dash: A web application framework for Python",
+            style={"textAlign": "center", "color": colors["text"]},
         ),
         dcc.Graph(id="example-graph", figure=fig),
-    ]
+    ],
 )
 
 if __name__ == "__main__":
